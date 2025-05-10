@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About the Singer{% endblock %}
+
+{% block content %}
+<div class="singer-info">
+
+    <img src="{% static 'images/Zirak.jpg' %}" alt="Hasan Zirak">
+    <p>
+        Hasan Zirak was a famous Kurdish singer known for his emotional voice and deep influence on Kurdish music
+    </p>
+
+      <img src="{% static 'images/Zyad.jpg' %}" alt="Hasan Zirak">
+    <p>
+       Zyad Asaad is a talented Kurdish singer known for his passionate performances and soulful voice. His music often blends traditional Kurdish melodies with modern influences
+    </p>
+
+     <img src="{% static 'images/tara.jpg' %}" alt="Hasan Zirak">
+    <p>
+       Tara Rasul is a rising Kurdish singer celebrated for her soft vocals and heartfelt songs. Her music often reflects themes of love and identity
+
+
+
+       <div class="home-button">
+    <a href="/"><button>Return to Home</button></a>
+</div>
+
+</div>
+
+
+{% endblock %}

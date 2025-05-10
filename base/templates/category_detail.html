@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ category|title }} Songs{% endblock %}
+
+{% block content %}
+<div class="category-container">
+    <h1>{{ category|title }} Songs</h1>
+    <div class="container">
+
+        {% if category == 'kurdish' %}
+            <div class="category-card" id="card1">
+                <img src="{% static 'images/Zirak.jpg' %}" alt="Chopi Chopi">
+                <h2>Hasan Zirak -Maryam Bokani</h2>
+                <audio id="audio1" src="{% static 'songs/Hasan.mp3' %}"></audio>
+                <button onclick="togglePlay('audio1', this, 'card1')">Play</button>
+            </div>
+
+            <div class="category-card" id="card2">
+                <img src="{% static 'images/tara.jpg' %}" alt="Gul">
+                <h2>Tara Rasul-Dw Haftaya</h2>
+                <audio id="audio2" src="{% static 'songs/taras.mp3' %}"></audio>
+                <button onclick="togglePlay('audio2', this, 'card2')">Play</button>
+            </div>
+
+            
+            <div class="category-card" id="card3">
+                <img src="{% static 'images/Zyad.jpg' %}" alt="Gul">
+                <h2>Zyad Asad - Pey blen</h2>
+                <audio id="audio3" src="{% static 'songs/Ziad.mp3' %}"></audio>
+                <button onclick="togglePlay('audio3', this, 'card2')">Play</button>
+            </div>
+
+          
+          
+          
+
+
+        {% elif category == 'japanese' %}
+            <div class="category-card" id="card4">
+                <img src="{% static 'images/miki.jpg' %}" alt="Unravel">
+                <h2>Miki Matsuraba - Stay With Me</h2>
+                <audio id="audio4" src="{% static 'songs/myki.mp3' %}"></audio>
+                <button onclick="togglePlay('audio4', this, 'card4')">Play</button>
+            </div>
+
+            <div class="category-card" id="card5">
+                <img src="{% static 'images/raidwimps.jpg' %}" alt="Gurenge">
+                <h2>Radwimps - Dream Lantern</h2>
+                <audio id="audio5" src="{% static 'songs/lantern.mp3' %}"></audio>
+                <button onclick="togglePlay('audio5', this, 'card5')">Play</button>
+            </div>
+
+             {% elif category == 'french' %}
+            <div class="category-card" id="card5">
+                <img src="{% static 'images/indilaimg.jpg' %}" alt="Unravel">
+                <h2>Indila- love story</h2>
+                <audio id="audio5" src="{% static 'songs/indila.mp3' %}"></audio>
+                <button onclick="togglePlay('audio5', this, 'card5')">Play</button>
+            </div>
+
+            <div class="category-card" id="card6">
+                <img src="{% static 'images/stromaeimg.jpg' %}" alt="Gurenge">
+                <h2>Stromae - Papaoutai </h2>
+                <audio id="audio6" src="{% static 'songs/stromae.mp3' %}"></audio>
+                <button onclick="togglePlay('audio6', this, 'card6')">Play</button>
+            </div>
+
+       
+           
+        {% endif %}
+    </div>
+
+    <div class="home-button">
+        <a href="/categories/">
+            <button>← Back to Categories</button>
+        </a>
+    </div>
+</div>
+
+<!-- Link the external JavaScript -->
+<script src="{% static 'js/player.js' %}"></script>
+{% endblock %}

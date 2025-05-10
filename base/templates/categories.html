@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Music Categories{% endblock %}
+
+{% block content %}
+<h1 style="text-align: center; color: #ffffff; margin-bottom: 30px;">Select a Music Category</h1>
+
+<div class="container">
+    <div class="category-card">
+        <img src="{% static 'images/kurdish.jpg' %}" alt="Kurdish Music">
+        <h2>Kurdish Music</h2>
+        <a href="/categories/kurdish"><button>Listen</button></a>
+    </div>
+
+    <div class="category-card">
+        <img src="{% static 'images/japan.jpg' %}" alt="Japanese Music">
+        <h2>Japanese Music</h2>
+        <a href="/categories/japanese"><button>Listen</button></a>
+    </div>
+
+    <div class="category-card">
+        <img src="{% static 'images/france.jpg' %}" alt="French Music">
+        <h2>French Music</h2>
+        <a href="/categories/french"><button>Listen</button></a>
+    </div>
+</div>
+
+<div class="home-button">
+    <a href="/"><button>Return to Home</button></a>
+</div>
+{% endblock %}
